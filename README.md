@@ -20,11 +20,15 @@ The key combinations are based on copy ('yank') and paste commands from the vi(m
 
 ## Examples
 
+### Copy file contents
+
 ```
 $ yy file.txt
 ```
 
 Copies the contents of file.txt to the clipboard
+
+### Copy a string
 
 ```
 $ echo "hello world!"
@@ -32,11 +36,15 @@ $ echo "hello world!"
 
 Copies the string "hello world" to the clipboard
 
+### Copy command output
+
 ```
 ls | yy
 ```
 
 Copies the output of `ls` to the clipboard
+
+### Paste a string
 
 ```
 $ pp
@@ -44,11 +52,17 @@ $ pp
 
 Outputs the string to the console
 
+### Execute a pasted string
+
 ```
-\`pp\` 
+``
+`pp`
+``
 ```
 
 Executes the pasted string (be super careful when using this)
+
+### Paste into new file
 
 ```
 pp > file.txt
@@ -56,17 +70,21 @@ pp > file.txt
 
 Creates file.txt with contents of the clipboard
 
+### Paste at end of existing file
+
 ```
 pp >> file.txt
 ```
 
 Appends clipboard contents to file.txt
 
+### Clone copied git repository
+
 ```
 gcpp
 ```
 
-Clones a GitHub repository that has its URL stored in the clipboard
+Clones a git repository that has its URL stored in the clipboard
 
 ## Usage
 
