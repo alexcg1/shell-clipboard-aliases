@@ -20,7 +20,18 @@ The key combinations are based on copy ('yank') and paste commands from the vi(m
 
 ## Install
 
-Copy the contents of [aliases](aliases) to .bashrc or the relevant file for whichever shell you use
+First up, you'll need to have [xclip](https://github.com/astrand/xclip) installed. On Ubuntu you can do this by running:
+
+```
+apt-get install xclip
+```
+
+Then just copy the contents of [aliases](aliases) to your .bashrc or the relevant file for whichever shell you use.
+
+## Limitations
+
+* For now this only works with X Windows, not Wayland. Though you could just install [wl-clipboard](https://github.com/bugaevc/wl-clipboard) and write your own aliases for that.
+* I've tested it with Bash and ZSH. I assume it should work for other shells too since it's dead simple
 
 ## Examples
 
