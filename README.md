@@ -18,7 +18,13 @@ I created some shell aliases to fix this:
 
 The key combinations are based on copy ('yank') and paste commands from the vi(m) editor
 
+## Install
+
+Copy the contents of [aliases](aliases) to .bashrc or the relevant file for whichever shell you use
+
 ## Examples
+
+Don't actually type the `$` sign. That's just to show you should be typing this at a terminal
 
 ### Copy file contents
 
@@ -39,7 +45,7 @@ Copies the string "hello world" to the clipboard
 ### Copy command output
 
 ```
-ls | yy
+$ ls | yy
 ```
 
 Copies the output of `ls` to the clipboard
@@ -54,18 +60,16 @@ Outputs the string to the console
 
 ### Execute a pasted string
 
-```
-``
-`pp`
-``
-```
+backtick pp backtick
 
-Executes the pasted string (be super careful when using this)
+Github doesn't like me using backticks (i.e. the key below escape and above tab on many keyboards) in code blocks, so excuse the formatting. 
+
+Wrap the pp command in backticks to execute the command stored in the clipboard
 
 ### Paste into new file
 
 ```
-pp > file.txt
+$ pp > file.txt
 ```
 
 Creates file.txt with contents of the clipboard
@@ -73,7 +77,7 @@ Creates file.txt with contents of the clipboard
 ### Paste at end of existing file
 
 ```
-pp >> file.txt
+$ pp >> file.txt
 ```
 
 Appends clipboard contents to file.txt
@@ -81,11 +85,8 @@ Appends clipboard contents to file.txt
 ### Clone copied git repository
 
 ```
-gcpp
+$ gcpp
 ```
 
 Clones a git repository that has its URL stored in the clipboard
 
-## Usage
-
-Copy the contents of [aliases](aliases) to .bashrc or the relevant file for whichever shell you use
