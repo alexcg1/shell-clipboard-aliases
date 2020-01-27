@@ -1,0 +1,2 @@
+alias pp='xclip -o -selection clipboard'
+alias yy='xclip -selection clipboard'
