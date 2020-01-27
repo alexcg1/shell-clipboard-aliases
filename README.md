@@ -1,6 +1,6 @@
 # Shell Clipboard Aliases
 
-## What?
+## What is it?
 
 Shell aliases to make clipboard use easier.
 
@@ -10,7 +10,7 @@ Working with the X Windows clipboard from the terminal is a bit of a pain. You e
 
 ## yy, pp, gcpp
 
-I created a couple of shell aliases to fix this:
+I created some shell aliases to fix this:
 
 * `yy` copies something to the clipboard
 * `pp` pastes the clipboard contents
@@ -27,10 +27,16 @@ $ yy file.txt
 Copies the contents of file.txt to the clipboard
 
 ```
-$ echo "hello world!
-"```
+$ echo "hello world!"
+```
 
 Copies the string "hello world" to the clipboard
+
+```
+ls | yy
+```
+
+Copies the output of `ls` to the clipboard
 
 ```
 $ pp
@@ -43,6 +49,18 @@ Outputs the string to the console
 ```
 
 Executes the pasted string (be super careful when using this)
+
+```
+pp > file.txt
+```
+
+Creates file.txt with contents of the clipboard
+
+```
+pp >> file.txt
+```
+
+Appends clipboard contents to file.txt
 
 ```
 gcpp
